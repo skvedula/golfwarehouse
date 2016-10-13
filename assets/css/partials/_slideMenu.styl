@@ -1,0 +1,95 @@
+body.bb-slide-menu-active{
+  background: $primary-color;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  .body-wrapper {
+    transform: translateX(80%);
+  }
+  #bb-slide-menu {
+    transform: translateX(0);
+  }
+  #bb-overlay {
+    display: block;
+  }
+}
+
+.body-wrapper {
+  background: $body-background;
+  transition: transform 0.2s ease;
+}
+
+#bb-slide-menu-btn {
+  display: block;
+}
+
+#bb-slide-menu {
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: $primary-color;
+  width: 80%;
+  transition: transform 0.2s ease;
+  transform: translateX(-120%);
+  z-index: 10;
+  .link-bar {
+    height: $slidemenu-link-bar-height;
+    line-height: $slidemenu-link-bar-height;
+    border-bottom: $slidemenu-border;
+    font-weight: bold;
+    color: white;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .main-menu {
+    margin: 0;
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+    &.inactive {
+      transform: translateX(-120%);
+    }
+    li {
+      text-transform: uppercase;
+      > a[href='/golf-discount'] {
+        background-color: $discount-button-color;
+      }
+    }
+    .nav-link {
+      background-color: $body-background;
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+  .categories {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateX(120%);
+    transition: transform 0.2s ease;
+    &.active {
+      transform: translateX(0);
+    }
+    .category {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .back {
+      color: $primary-color;
+      background: $body-background;
+      font-weight: bold;
+      text-transform: uppercase;
+      &:before {
+        sprite(icn-arrow-left);
+        margin-right: 5px;
+        content: '';
+      }
+    }
+  }
+}

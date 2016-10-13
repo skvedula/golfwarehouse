@@ -1,0 +1,35 @@
+body.bb-buyers-club {
+  .rowContainer {
+    padding: 0 10px;
+    >.row:not(.margin-true) {
+      padding: 0;
+    }
+    [id^="PageHeading"] {
+      margin: 0 !important;
+    }
+  }
+  h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    &.buyersClubHeader {
+      font-weight: normal;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+  .buyersCarat {
+    display: none;
+    & + strong {
+      display: block;
+      margin: 5px 0;
+      & + br {
+        display: none;
+      }
+    }
+  }
+  .buyers-club {
+    display: none;
+  }
+}

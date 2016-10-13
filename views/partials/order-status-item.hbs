@@ -1,0 +1,28 @@
+{{#with item}}
+  {{#each this}}
+    {{#if img.prodImg.length}}
+      <section class="order-detail-item">
+        <div class="img-title">
+          <div class="item-image">
+            <img src="{{img.prodImg}}" />
+          </div>
+          <div class="item-specs">
+            {{{img.prodSpecs}}}
+          </div>
+        </div>
+        <div class="detail-info">
+          <ul>
+            {{#each data}}
+              <li><strong class="{{title}}"></strong> {{{value}}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </section>
+    {{/if}}
+  {{/each}}
+  {{#if subTotal}}
+    <section class="order-detail-sub-total">
+      {{{subTotal}}}
+    </section>
+  {{/if}}
+{{/with}}

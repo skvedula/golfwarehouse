@@ -1,0 +1,45 @@
+<ul class="cart-products">
+  {{#each products}}
+    <li data-id="{{id}}">
+      <div class="product-image">
+        <a href="{{href}}">
+          <img src="{{img}}">
+        </a>
+      </div>
+
+      <div class="product-details">
+
+        <h2 class="product-title">
+          <a href="{{href}}">
+            {{title}}
+          </a>
+        </h2>
+
+        <ul>
+          <li class="price">{{price}}</li>
+          {{#with promo}}
+            <li class="promo {{#if discount}}active{{/if}}">
+              <span class="discount">{{{discount}}}</span>
+              <span class="value">-{{value}}</span>
+            </li>
+          {{/with}}
+          <li class="stock">{{stock}}</li>
+          <li class="availability">{{availability}}</li>
+        </ul>
+
+
+        {{#with qty}}
+          <div class="qty-stepper" data-min="{{min}}" data-max="{{max}}">
+            <a class="stepper decrease {{active}}"></a>
+            <input data-proxy-for="{{id}}" type="tel" value="{{value}}">
+            <a class="stepper increase active"></a>
+          </div>
+        {{/with}}
+
+        <a class="remove" onclick="{{{remove}}}">X</a>
+
+      </div>
+
+    </li>
+  {{/each}}
+</ul>

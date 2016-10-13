@@ -1,0 +1,35 @@
+<h2>Site Feedback</h2>
+
+<form id="feedback" action="javascript:void(null)" onsubmit="submitFeedback(); return false;">
+  <input type="hidden" name="Feedback[property_id]" value="{{config.cms.property_id}}">
+  <input type="hidden" name="Feedback[vid]" value="">
+  <input type="hidden" name="Feedback[referrer]" value="">
+
+  <p style="margin-bottom:10px;">How can we improve your experience?</p>
+  <textarea id="area" name="Feedback[feedback]" rows="5" style="width:100%; box-sizing:border-box;"></textarea>
+
+  <div class="clearfix" style="margin-top:10px;">
+    <input type="submit" class="button radius small right" value="Submit Feedback">
+  </div>
+</form>
+
+<script>
+  function submitFeedback() {
+    if (!document.querySelector('#area').value.length) {
+      alert('Please provide feedback.');
+      return;
+    }
+    var request = new XMLHttpRequest();
+    request.open('POST', '//brand.brandingbrand.com/site_feedback/feedbacks/add', true);
+
+    request.onload = function() {
+      document.getElementById('feedback').outerHTML = "<h3>Thank you for your feedback.</h3>";
+    };
+
+    document.querySelector('input[name="Feedback[vid]"]').value = bb_vid && bb_vid.get();
+    document.querySelector('input[name="Feedback[referrer]"]').value = document.referrer;
+    request.send(new FormData(document.getElementById('feedback')));
+  }
+</script>
+
+<a class="close-reveal-modal">&#215;</a>

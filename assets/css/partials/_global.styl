@@ -1,0 +1,319 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+  height: auto;
+}
+
+body {
+  font-size: $font-size;
+  line-height: 1.6rem;
+  font-family: $font-family;
+}
+
+input, select {
+  height: $field-height;
+  line-height: $field-height;
+  padding: 10px;
+  font-size: 1.2rem;
+  appearance: none;
+  padding: 0 10px;
+  background-color: $field-background;
+  border-radius: 0;
+  &:focus {
+    outline-width: 0;
+  }
+  border: 0;
+}
+button {
+  border: 0;
+}
+dropdown() {
+  background: $field-background url("../images/dropdown-bg.png") right center no-repeat;
+  background-size: 24px $field-height;
+  padding: 0 24px 0 10px;
+}
+select {
+  dropdown();
+}
+
+input[type="checkbox"] {
+  sprite(checkbox-off);
+  &:checked {
+    sprite(checkbox-on);
+  }
+}
+
+input[type="radio"] {
+  background-color: transparent;
+  vertical-align: middle;
+  sprite(radio-off);
+  &:checked {
+    sprite(radio-on);
+  }
+}
+
+.qty-stepper {
+  width: 100px;
+  height: $field-height;
+  margin: 0;
+  input {
+    height: $field-height;
+    border: 0;
+    font-size: 1.2rem;
+    color: $font-color;
+  }
+  a.stepper {
+    flex: initial;
+    width: 32px;
+    text-align: center;
+    display: block;
+    &:after {
+      left: 50%;
+      top: 50%;
+      margin-left: -(icn-minus-white-width/2);
+      margin-top: -(icn-minus-white-height/2);
+    }
+  }
+  .stepper.decrease {
+    &:after {
+      sprite(icn-minus-disabled);
+      content: '';
+    }
+    &.active:after {
+      sprite(icn-minus-white);
+    }
+  }
+  .stepper.increase {
+    &:after {
+      sprite(icn-plus-disabled);
+      content: '';
+    }
+    &.active:after {
+      sprite(icn-plus-white);
+    }
+  }
+}
+
+breadcrumb-title(){
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: block;
+  color: $font-color;
+  margin: 10px 0;
+}
+
+div#widget_breadcrumb {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  ul > li {
+    line-height: 1.2;
+    &.current {
+      text-transform: uppercase;
+      breadcrumb-title();
+    }
+  }
+}
+#breadcrumb {
+  text-align: center;
+  #orderItemDisplay {
+    padding: 0;
+  }
+  .headingtext {
+    width: 100%;
+    breadcrumb-title();
+  }
+}
+
+.link-bar, .accordion-navigation a.link-bar {
+  display: block;
+  line-height: $link-bar-height;
+  height: $link-bar-height;
+  padding: 0 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.accordion, [data-accordion] {
+  padding: 0;
+  border-bottom: 1px solid $accordion-border-color;
+  a.link-bar {
+    background-color: $accordion-background;
+    border-top: 1px solid $accordion-border-color;
+  }
+  .accordion-navigation {
+    > a {
+      position: relative;
+      font-family: $font-family;
+      &:hover {
+        background-color: $accordion-background;
+      }
+      &:after {
+        sprite(icn-plus);
+        content: '';
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -(icn-plus-height/2);
+      }
+    }
+    &.active > a {
+      background: $accordion-background;
+      &:after {
+        sprite(icn-minus);
+        margin-top: -(icn-minus-height/2);
+      }
+    }
+  }
+  .content.active {
+    padding: 0 20px;
+  }
+}
+
+#bb-overlay {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.rating {
+  display: inline-block;
+  width: $rating-width;
+  height: $rating-height;
+  background-size: $review-star-width $review-star-height;
+  text-align: left;
+  .value {
+    display: inline-block;
+    width: $rating-width;
+    height: $rating-height;
+    background-image: url('../images/review-star.png');
+    background-size: $review-star-width $review-star-height;
+  }
+}
+
+.ratings-container {
+  float: none;
+  display: inline-block;
+}
+
+.product_info, .compare_main {
+  .rating {
+    margin-left: 4px;
+  }
+}
+
+
+// desktop overrides
+
+#page {
+  width: 100%;
+  max-width: 100%;
+  min-height: 0 !important;
+  min-width: 0 !important;
+}
+
+.rowContainer {
+  padding: 0;
+}
+
+#web-performance-credit {
+  display: none;
+}
+
+.criteo_header, #cto_cookies_header_message {
+  display: none;
+}
+
+// Live chat modal
+.yui-skin-sam .mask,
+.yui-panel-container.yui-dialog.yui-simple-dialog {
+  display: none !important;
+}
+
+.static_page_content {
+  .page_header {
+    margin-bottom: 14px;
+  }
+}
+
+// shipping-info page
+.ShipInfoContainer {
+  .Ship-Headline, .Ship-Subhead  {
+    padding-bottom: 20px;
+  }
+
+  div[class^="Ship-SubheadChart"] {
+    height: 50px;
+  }
+
+  div[class^="Ship-Subhead"], .Ship-Headline {
+    display: table;
+    min-width: 100%;
+  }
+
+  .Ship-Subhead {
+    display: table;
+  }
+}
+
+// wichita store page
+.rowContainer#container_3074457345618282308 {
+  .Store-TopB, .Store-TopF {
+    p {
+      width: 70%;
+    }
+  }
+
+  .Store-TopC {
+    width: 105%;
+  }
+
+  .Store-TopG {
+    width: 98%;
+  }
+
+  .Store-TopH p {
+    width: 85%;
+  }
+
+  .H1Headline {
+    text-align: center;
+    width: 100%;
+  }
+
+  .headlineSectionBlue-Store {
+    font-size: 12px;
+  }
+
+  .Store-FScol {
+    float: none;
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .Store-Button, .categoryNavWidget {
+    display: none;
+  }
+
+  .Store-small-text {
+    padding: 0;
+  }
+}
+
+.headlineSectionBlueBL {
+  height: auto !important;
+  width: 100%;
+  + .headlineSectionBlueTriangleBL {
+    display: none;
+  }
+}

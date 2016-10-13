@@ -1,0 +1,2 @@
+# Ignore deployment.json
+deployment.json merge=ours

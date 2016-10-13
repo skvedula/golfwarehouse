@@ -1,0 +1,195 @@
+{
+  "name": "thegolfwarehouse.platform",
+  "version": "0.0.43",
+  "description": "Mobile Site",
+  "main": "app.js",
+  "dependencies": {
+    "bb_platform": "^1.x"
+  },
+  "engines": {
+    "node": "4.4.5"
+  },
+  "config": {
+    "host": "www.tgw.com",
+    "clientStage": {
+      "-stage": "tgwecomdevweb01.tgw.com"
+    },
+    "enableHandlebars": true,
+    "tidyResponse": false,
+    "decodeEntities": true,
+    "analyzerIgnore": [
+      "/wcsstore/dojo18/",
+      "/wcsstore/StorefrontAssetStore/",
+      "/GetCatalogEntryDetailsByIDView",
+      "/GetInventoryStatusByIDView",
+      "/AjaxREST",
+      "/AjaxPerson",
+      "/orderTotalAsJSON",
+      "/PunchoutPaymentRepay",
+      "/wcsstore/Personalization/",
+      "myjoys",
+      "/AjaxCheckBalance",
+      "/AjaxRestWishListRemoveItem",
+      "/AjaxRestWishListUpdate",
+      "/AjaxRestWishListCreate",
+      "/AjaxRestWishListChangeState",
+      "/AjaxRestWishListDelete",
+      "/AjaxRestWishListAddItem",
+      "/AjaxOrderStatusLookup"
+    ],
+    "cms": {
+      "scriptVersion": "1.x",
+      "property_id": 136
+    },
+    "dnsUpdates": [
+      {
+        "url": "tgwecomdevweb01",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "tgwecomdevweb01.tgw.com",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "tgwecomdevweb01.csr.tgw.com",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "test.tgw.com",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "test.csr.tgw.com",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "test.baseballsavings.com",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "test.csr.baseballsavings.com",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "test.csr.soccersavings.com",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "test.soccersavings.com",
+        "ip": "10.188.10.150"
+      },
+      {
+        "url": "tgwecomdevapp01",
+        "ip": "10.188.10.151"
+      },
+      {
+        "url": "tgwecomdevapp01.tgw.com",
+        "ip": "10.188.10.151"
+      },
+      {
+        "url": "tgwecomdevapp02",
+        "ip": "10.188.10.152"
+      },
+      {
+        "url": "tgwecomdevapp02.tgw.com",
+        "ip": "10.188.10.152"
+      },
+      {
+        "url": "tgwecomdevdb01",
+        "ip": "10.188.10.153"
+      },
+      {
+        "url": "tgwecomdevdb01.tgw.com",
+        "ip": "10.188.10.153"
+      },
+      {
+        "url": "tgwecomdevsearch01",
+        "ip": "10.188.10.154"
+      },
+      {
+        "url": "tgwecomdevsearch01.tgw.com",
+        "ip": "10.188.10.154"
+      },
+      {
+        "url": "tgwecomdevdeploy01",
+        "ip": "10.188.10.155"
+      },
+      {
+        "url": "tgwecomdevdeploy01.tgw.com",
+        "ip": "10.188.10.155"
+      },
+      {
+        "url": "tgwecomdevmq01",
+        "ip": "10.188.10.156"
+      },
+      {
+        "url": "tgwecomdevmq01.tgw.com",
+        "ip": "10.188.10.156"
+      },
+      {
+        "url": "tgwecomstgweb01",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "tgwecomstgweb01.tgw.com",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "tgwecomstgweb01.csr.tgw.com",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "stage.tgw.com",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "stage.csr.tgw.com",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "stage.baseballsavings.com",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "stage.csr.baseballsavings.com",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "stage.csr.soccersavings.com",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "stage.soccersavings.com",
+        "ip": "10.188.10.140"
+      },
+      {
+        "url": "tgwecomstgapp01",
+        "ip": "10.188.10.141"
+      },
+      {
+        "url": "tgwecomstgapp01.tgw.com",
+        "ip": "10.188.10.141"
+      },
+      {
+        "url": "tgwecomstgdb01",
+        "ip": "10.188.10.142"
+      },
+      {
+        "url": "tgwecomstgdb01.tgw.com",
+        "ip": "10.188.10.142"
+      },
+      {
+        "url": "tgwecomstgsearch01",
+        "ip": "10.188.10.143"
+      },
+      {
+        "url": "tgwecomstgsearch01.tgw.com",
+        "ip": "10.188.10.143"
+      }
+    ],
+    "abtest": {
+      "split": 100,
+      "version": "4"
+    }
+  }
+}

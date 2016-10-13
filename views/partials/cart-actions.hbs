@@ -1,0 +1,10 @@
+<nav class="cart-actions">
+  <div>
+    <a class="paypal-button {{#if paypalDisabled}}disabled{{/if}}" onclick="{{paypalAction}}">
+    </a>
+  </div>
+  <div>
+    <a class="checkout-button"{{#unless isGuest}} onclick="{{checkoutAction}}"{{/unless}}>Checkout</a>
+  </div>
+</nav>
+{{{paypalClickInfo}}}

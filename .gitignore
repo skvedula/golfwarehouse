@@ -1,0 +1,49 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+bower_components
+.DS_Store
+._.DS_Store
+.tmp
+.built
+
+# Sublime Text
+*.sublime-workspace
+sftp-config.json
+
+# TextMate / BBEdit
+*.tmproj
+*.tmproject
+
+# SASS
+/nbproject/private/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log
+logs
+pids
+
+# Logs
+*.log
+
+# mergetool
+
+# Compiled Files
+builtAssets
+.temp
+
+# Sprites
+webroot/images/sprites*
+assets/css/lib/sprites.styl
+
+# Deployments
+deployment.json

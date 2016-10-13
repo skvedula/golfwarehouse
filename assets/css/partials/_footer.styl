@@ -1,0 +1,190 @@
+#footerWrapper, #footerPrivacyWrapper, .footer_wrapper_position {
+  display: none;
+}
+
+#bb-global-footer {
+  nav {
+    margin-top: 20px;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    li {
+      font-size: 1.4rem;
+      display: inline-block;
+      text-transform: capitalize;
+      margin: 0 8px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  .bb-footer-primary {
+    padding: 10px 10px 20px;
+    background-color: $footer-primary-background;
+    nav ul:first-of-type a {
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+  .bb-footer-secondary {
+    padding: 15px 10px;
+    background: $footer-secondary-background;
+    .feedback {
+      text-align: center;
+      a {
+        color: #fff;
+      }
+    }
+    li {
+      margin: 0;
+      font-size: 1.1rem;
+      color: $footer-secondary-color;
+      a {
+        color: white;
+      }
+      &:after {
+        content: '|';
+        margin: 0 4px;
+      }
+      &:last-of-type:after {
+        display: none;
+      }
+    }
+  }
+  .social li {
+    font-size: 0;
+    &:after {
+      content: '';
+      margin: 0 12px;
+    }
+    > a {
+      &:after {
+        content: '';
+        vertical-align: middle;
+      }
+      &.icn-facebook:after {
+        sprite(icn-facebook);
+      }
+      &.icn-twitter:after {
+        sprite(icn-twitter);
+      }
+      &.icn-pinterest:after {
+        sprite(icn-pinterest);
+      }
+      &.icn-youtube:after {
+        sprite(icn-youtube);
+      }
+    }
+  }
+}
+
+// Footer E-mail Signup
+.bb-email-signup {
+  display: flex;
+  > * {
+    display: block;
+  }
+  input {
+    flex: 1;
+    margin-right: 10px;
+    border: 1px solid $body-background;
+    &.error {
+      border: 1px solid $error-color;
+    }
+  }
+  button {
+    background-color: $email-signup-button-background;
+    color: $body-background;
+    font-size: 1.1rem;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+// E-mail Signup page
+#page.email-signup {
+  h1.xl-heading {
+    breadcrumb-title();
+    text-align: center;
+  }
+  h2, strong {
+    font-size: 1.4rem;
+  }
+  #EmailSignUpForm td.label {
+    font-size: 1.2rem;
+    min-width: 0;
+  }
+  #EmailSignUpForm {
+    margin 0;
+    .inputField {
+      font-size: 1.2rem;
+    }
+  }
+}
+.dijitTooltipConnector {
+  display: none;
+}
+.dijitTooltipContainer {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  &:after, &:before {
+    display: none;
+  }
+}
+
+//Request Catalog Page
+#tgwcatalog .col {
+  float: left;
+
+  .inputField {
+    min-width: 160px !important;
+  }
+
+  #country1, select[id*="states"] {
+    padding: 0px 0px 0px 8px !important;
+  }
+
+  #state1 {
+    padding: 8px;
+    border: 1px solid #bfbfbf;
+  }
+}
+
+#siteFeedback {
+  background: $pdp-controls-background;
+  min-height: initial;
+  h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+  p {
+    color: $primary-color;
+  }
+  input[type="submit"] {
+    background: $email-signup-button-background;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+  }
+  #area {
+    border: none;
+  }
+}
+
+.reveal-modal {
+  top: 50% !important;
+}

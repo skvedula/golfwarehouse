@@ -1,0 +1,28 @@
+<div id="bb-slide-menu">
+  <ul class="main-menu">
+    {{#each categories}}
+      <li class="{{#if subcategories.length}}has-sub-menu{{/if}}" data-menu-id="{{@index}}">
+        <a class="link-bar" href="{{href}}">{{title}}</a>
+      </li>
+    {{/each}}
+    {{#each header.nav}}
+      <li>
+        <a class="link-bar" href="{{href}}" {{#if reveal}}data-reveal-id="{{reveal}}"{{/if}}>{{title}}</a>
+      </li>
+    {{/each}}
+  </ul>
+  <div class="categories">
+    {{#each categories}}
+      <div class="category" data-parent-menu-id="{{@index}}">
+        <h2><a href="#" class="back link-bar">{{title}}</a></h2>
+        <ul class="subcategories">
+          {{#each subcategories}}
+            <li>
+              <a class="link-bar" href="{{href}}">{{title}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+  </div>
+</div>

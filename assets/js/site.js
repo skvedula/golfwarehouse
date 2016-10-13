@@ -1,0 +1,15 @@
+//= require bb/platform1.0
+//= require bb/brandingbrand.util.js
+//= require bb/brandingbrand.qty-stepper.js
+//= require platform1.0/foundation/foundation.accordion.js
+//= require platform1.0/foundation/foundation.reveal.js
+//= require platform1.0/fastclick.js
+//= require slideMenu.js
+//= require ./common.js
+//= require ./home.js
+//= require ./brands.js
+//= require ./products.js
+//= require ./pdp.js
+//= require ./cart.js
+//= require ./checkout.js
+//= require ./aly.js

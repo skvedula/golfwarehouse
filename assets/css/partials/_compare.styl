@@ -1,0 +1,42 @@
+body.compare-products {
+  #widget_breadcrumb {
+    li.current {
+      display: none;
+    }
+  }
+  .compare_heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: $font-color;
+    > div.zebra.heading {
+      font-size: 12px;
+      font-weight: normal;
+      text-transform: none;
+      padding: 5px;
+    }
+  }
+  .compare_main {
+    .compare_4 > .row > .item {
+      font-size: 10px;
+    }
+    .row {
+      .item {
+        text-align: center;
+        span.see-price-cart {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .content > .compare_main:not(:first-child) {
+    display: none;
+  }
+  a.compareRemove:before {
+    content: "x";
+    font-weight: bold;
+  }
+  .compare_back {
+    font-size: 12px;
+  }
+}

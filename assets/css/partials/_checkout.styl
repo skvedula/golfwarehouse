@@ -1,0 +1,600 @@
+#bbCheckoutHeader {
+  .header-main-container {
+    padding: 5px 10px;
+    text-align: center;
+    position: relative;
+    height: 50px;
+
+    .cart-wrapper {
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      left: auto;
+      text-align: right;
+      width: 40px;
+      height: 35px;
+    }
+
+    .logo-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 35px;
+      width: 100px;
+      text-align: left;
+    }
+
+    .logo {
+      sprite(logo);
+      display: inline-block;
+    }
+
+    .cart {
+      sprite(icn-cart);
+      display: inline-block;
+    }
+  }
+}
+
+#bbCheckoutFooter {
+  line-height: 3rem;
+  background-color: $footer-secondary-background;
+  color: #fff;
+  > .checkout-contact {
+    margin-top: 0;
+    background: $content-background-color;
+    padding: 10px 0;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      li {
+        font-size: 1.4rem;
+        display: inline-block;
+        text-transform: capitalize;
+        margin: 0 8px;
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+    a {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+  .privacyText a {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    &::after{
+      content: "|";
+      padding: 0px 5px;
+    }
+
+    &:last-of-type::after {
+      content: "";
+    }
+  }
+
+  .copyright {
+    color: $footer-secondary-color;
+    font-size: 1.1rem;
+  }
+}
+
+#checkout_crumb:not(.receipt-page) {
+  width: 100%;
+
+  .crumb{
+    padding: 0px !important;
+    display: flex;
+    width: 100%;
+
+    span {
+      padding: 10px;
+    }
+  }
+
+  .step_on {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  .step_off {
+    background-color: $checkout-breadcrunmb-inactive-color;
+    color: $product-sortby-color;
+  }
+}
+
+.myaccount_header {
+  display: none;
+}
+
+#email1 {
+  padding: 6px;
+  border: 1px solid $border-color;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#WC_UnregisteredCheckout_div_9 {
+  border: none !important;
+  padding: 0px !important;
+}
+
+#unregistered_form {
+
+  h2 {
+    text-align: center;
+    color: #000;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #fff;
+    margin: 10px 0px;
+  }
+
+  input {
+    height: auto;
+    width: 100%;
+    font-size: 1.4rem;
+    border: none !important;
+    padding: 6px;
+  }
+
+  select {
+    font-size: 1.4rem;
+    border: none !important;
+    height: 44px;
+    margin-top: 2px;
+  }
+
+  .denote_required_field {
+    position: static;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .label_spacer{
+    padding-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .col1_bill, .col2_ship {
+    padding: 0px;
+    background-color: $content-background-color;
+    border: none;
+  }
+}
+
+#shippingCreateEditArea1 {
+
+  > div:first-of-type {
+    display: block !important;
+    text-align: center;
+  }
+}
+
+#billingAddressCreateEditFormDiv_1, #shippingAddressCreateEditFormDiv_1 {
+  padding: 5px;
+}
+
+#WC_UnregisteredCheckout_div_12 label {
+  padding: 8px 10px 8px 30px !important;
+}
+
+
+.checkout_confirmation {
+  .continue_shopping {
+    float: none !important;
+  }
+
+  .shipping_billing_height {
+    padding: 0px !important;
+    border: none !important;
+  }
+
+  .shipping_address {
+    float: none !important;
+    padding: 10px !important;
+    margin: 0px !important;
+  }
+
+  .shipping_method {
+    float: none !important;
+    padding: 10px !important;
+    margin: 2px 0px 0px !important;
+  }
+
+  .contentline {
+    height: 2px !important;
+  }
+
+  .main_header {
+    border: none !important;
+    padding: 10px !important;
+  }
+
+  #billing_summary {
+    padding: 10px 0px;
+  }
+
+  #order_details {
+    background-color: #fff !important;
+  }
+
+  #shipping {
+    background-color: transparent !important;
+  }
+}
+
+#WC_OrderShippingBillingConfirmationPage_span_1 {
+  padding-left: 5px
+}
+
+#WC_CheckoutPaymentAndBillingAddressSummaryf_div_1 { //ID is actually misspelled on desktop
+  border: none !important;
+  background-color: #f5f5f5;
+  padding: 10px !important;
+}
+
+#printOut {
+  display: none;
+}
+
+form[name="RegisterFromOrderConf"] {
+  margin: 0px !important;
+  padding: 10px !important;
+
+  input {
+    width: 65%;
+  }
+}
+
+#WC_ShipmentDisplay_div_5, #WC_ShipmentDisplay_div_22 {
+  background-color: $content-background-color !important;
+
+  .main_header_text {
+    text-align: center;
+    color: #000;
+    font-size: 1.6rem;
+  }
+
+  .headingtext {
+    float: none;
+    text-align: center;
+  }
+}
+
+#shipping {
+  background-color: $content-background-color;
+
+  .shipping_method {
+    float: none;
+    padding: 10px;
+    margin: 0px;
+    background-color: $content-background-color;
+    border-bottom: 1px solid #fff;
+  }
+
+  .shipping_address {
+    background-color: $content-background-color !important;
+    padding: 0px;
+    margin: 0px;
+    float: none;
+  }
+
+  select {
+    border: none !important;
+    height: 44px;
+    margin-top: 2px;
+    padding: 5px 10px;
+  }
+
+  .title {
+    color: #000;
+  }
+
+  .selectedAddress {
+    padding: 5px !important;
+  }
+
+  .tlignore {
+    position: static !important;
+    margin-top: 5px;
+  }
+}
+
+#shippingAddressDisplayArea {
+  padding: 10px;
+}
+
+
+#WC_ShipmentDisplay_div_16 {
+  width: 100% !important;
+  border: none !important;
+  padding: 0px !important;
+}
+
+#newShippingAddressLink, #internationalShipping {
+  margin: 0px 5px;
+}
+
+#shippingAddressSelectBoxArea {
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+
+#InternationalShippingInfoPopUp {
+  .dijitDialogPaneContent {
+    min-height: 130px !important;
+  }
+}
+
+#WC_ShipmentDisplay_div_17 {
+  padding: 10px 0px;
+  background-color: #fff;
+}
+
+form[name="PromotionCodeForm"] {
+  margin-top 10px;
+
+  > div:first-of-type {
+    display: block !important;
+    float: none !important;
+    text-align: left !important;
+    width: 100% !important;
+    font-weight: bold;
+  }
+
+  .button_text {
+    height: 42px;
+  }
+}
+
+#promotions {
+  text-align: left;
+}
+
+#total_breakdown  {
+  .promotion_input {
+    width: 70%;
+    input {
+      width: 100%;
+    }
+  }
+
+  .promotion_button {
+    float: right;
+  }
+}
+
+#order_details {
+  .th_align_left_normal {
+    min-width: 0px;
+    width: auto;
+  }
+
+  td {
+    width: auto !important;
+  }
+}
+
+#order_total {
+  width: 100%;
+  display: inline-table !important;
+
+  td {
+    width: 50%;
+
+    &.total_details {
+      text-align: left !important;
+      padding-bottom: 5px;
+    }
+
+    &.total_figures {
+      text-align: right !important;
+    }
+  }
+
+  .order_total, .breadcrumb_current {
+    font-size: 1.6rem !important;
+  }
+
+  .order_total {
+    color: #000 !important;
+  }
+}
+
+#WC_ShipmentDisplay_div_30 {
+  background-color: $content-background-color;
+  padding: 0px !important;
+}
+
+form.payment-option-wrap {
+  border-top: 1px solid #fff !important;
+}
+
+#paymentAreaGcd, #paymentAreaGct {
+  background-color: #fff;
+  padding: 0px !important;
+  margin: 5px !important;
+  float: none;
+  width: 100%;
+}
+
+form[name="GiftCardForm"], form[name="GiftCertificateForm"], form[name="PaymentForm1"] {
+  width: 100%;
+  padding: 10px !important;
+  background-color: #fff !important;
+
+  h3 {
+    font-size: 1.3rem !important;
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  select {
+    border: none !important;
+    height: 44px;
+    margin-top: 2px;
+    padding: 5px 10px;
+  }
+
+  .billing_address_container {
+    float: none !important;
+    width: 100% !important;
+
+    label {
+      color: #000;
+    }
+  }
+
+  .billing_address {
+    padding: 10px !important;
+    float: none !important;
+    margin: 0px !important;
+  }
+
+  .billing_method {
+    margin: 0px 0px 5px 0px !important;
+    padding: 10px !important;
+    float: none !important;
+
+    .title {
+      color: #000;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.pp-pay-amt {
+  margin-left: 8px;
+
+  input[name="piAmount_display_paypal"]{
+    background-color: $content-background-color;
+  }
+}
+
+#paymentArea1 {
+  margin-top 5px;
+
+  .visaCVV2 {
+    display: block;
+    position: static;
+    margin: 10px 10px 10px 0px;
+    padding-right: 10px;
+    text-align: right;
+    width: 100%;
+  }
+
+  .card_info {
+    width: 100%;
+
+    .col1 {
+      width: 100%;
+    }
+
+    .card_number {
+      width: 60% !important;
+      margin-right: 5px;
+    }
+
+    input[name="account1"] {
+      width: 95% !important;
+      margin-top: 3px;
+      border: none !important;
+    }
+
+    input[name="cc_cvc"] {
+      margin-top: 3px;
+      width: 30%;
+      border: none !important;
+    }
+
+    select {
+      width: 100%
+    }
+  }
+
+  .date {
+    display: flex;
+    padding: 0px 0px 10px 0px;
+
+    select {
+      width: 100%;
+      margin-top: 3px;
+    }
+
+    > span {
+      flex: 1;
+    }
+
+    label {
+      margin-bottom: 3px;
+    }
+  }
+
+  label[for="piAmount_1_display"] {
+    color: #000;
+  }
+
+  input[name="piAmount_display"] {
+    margin-top: 3px;
+    color: #000 !important;
+  }
+}
+
+#shopcartAddressForm {
+  h1 {
+    margin: 0px 0px 0px 10px;
+    color: #000;
+    padding-bottom: 0px;
+  }
+
+  .body {
+    padding: 3px 5px 0px !important;
+  }
+
+  .label_spacer {
+    margin-bottom: 3px;
+  }
+
+  .input-wrap {
+    margin-top: 20px;
+  }
+
+  .denote_required_field {
+    top: 2px;
+  }
+}
+
+#ShippingBillingCheck, #WC_UnregisteredCheckout_div_12 {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+
+  input {
+    position: static !important;
+    vertical-align: middle !important;
+    height: 26px;
+    width: 26px;
+  }
+
+  label {
+    background: none !important;
+    border: none !important;
+    padding: 0px !important;
+  }
+}
+
+.promotion_used {
+  margin: $spacing 0px;
+}

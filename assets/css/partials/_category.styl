@@ -1,0 +1,27 @@
+#categoryIndex {
+  padding-top: 10px;
+  .subcategories {
+    list-style-type: none;
+    padding: 0;
+    li {
+      border-top: 1px solid $accordion-border-color;
+      position: relative;
+      a {
+        font-size: 1.6rem;
+        font-weight: bold;
+        .count {
+          font-weight: normal;
+        }
+        &:after {
+          sprite(icn-arrow-left-large);
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          margin-top: -(icn-arrow-left-large-height/2);
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+}

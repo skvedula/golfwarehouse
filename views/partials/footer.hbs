@@ -1,0 +1,57 @@
+<footer id="bb-global-footer">
+  {{#with footer}}
+    <section class="bb-footer-primary">
+
+      <form class="bb-email-signup" action="{{signup}}">
+        <input type="email" placeholder="Email Sign Up">
+        <button>Subscribe</button>
+      </form>
+
+      <nav>
+        {{#each nav}}
+          <ul>
+            {{#each this}}
+              <li>
+                <a href="{{href}}">{{title}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </nav>
+    </section>
+    <section class="bb-footer-secondary">
+      <div class="feedback row">
+        <a href="javascript:void(null)" data-reveal-id="siteFeedback">Submit Feedback</a>
+        <div id="siteFeedback" class="reveal-modal" data-reveal>
+          {{> feedback}}
+        </div>
+      </div>
+      <nav>
+        <ul class="social">
+          {{#each social}}
+            <li>
+              <a class="icn-{{id}}" href="{{href}}">{{title}}</a>
+            </li>
+          {{/each}}
+        </ul>
+        <ul>
+          {{#each bottomNav}}
+            <li>
+              <a href="{{href}}">{{title}}</a>
+            </li>
+          {{/each}}
+        </ul>
+        <ul>
+          <li>
+            <a href="#REL#{{desktopUrl}}">Desktop Site</a>
+          </li>
+          <li>
+            {{copyright}}
+          </li>
+        </ul>
+      </nav>
+    </section>
+  {{/with}}
+</footer>
+
+<div id="bb-overlay"></div>

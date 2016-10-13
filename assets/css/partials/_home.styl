@@ -1,0 +1,57 @@
+.bb-home-cms {
+  img {
+    width: 100%;
+  }
+  &.bb-home-cms ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+
+.slick-slider {
+  margin-bottom: 20px;
+}
+.slick-dots {
+  bottom: -20px;
+  button {
+    padding: 0;
+    &:before {
+      color: $tertiary-color;
+      opacity: 1;
+    }
+  }
+  li {
+    width: 15px;
+    margin: 0;
+    &.slick-active button:before {
+      color: $primary-color;
+    }
+  }
+}
+
+.home-categories.accordion {
+  .accordion-navigation a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .content.active ul {
+    padding: 0;
+    list-style-type: none;
+    li {
+      margin: 0 0 $spacing;
+    }
+    a {
+      color: $primary-color;
+      text-transform: none;
+      font-weight: 400;
+      line-height: $field-height;
+      display: block;
+    }
+  }
+  > li:last-of-type > a {
+    color: $discount-button-text-color;
+    background-color: $discount-button-color;
+  }
+}

@@ -1,0 +1,27 @@
+<div class="bb-home-cms home-banner">
+  <ul>
+    <div data-cms-key="Home/Home-Page-Carousel" data-cms-callback="bbHomeCarousel()" data-cms-wrap="li"></div>
+  </ul>
+</div>
+
+<ul class="home-categories accordion" data-accordion>
+  {{#each categories}}
+    <li class="accordion-navigation">
+      <a class="link-bar" href="#home-cat-{{@index}}">{{title}}</a>
+      <div id="home-cat-{{@index}}" class="content">
+        <ul>
+          {{#each subcategories}}
+            <li>
+              <a href="{{href}}">{{title}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </li>
+  {{/each}}
+</ul>
+
+<footer class="bb-home-cms">
+  <div data-cms-key="Home/Home-Page-Footer-Top"></div>
+  <div data-cms-key="Home/Home-Page-Footer-Bottom"></div>
+</footer>

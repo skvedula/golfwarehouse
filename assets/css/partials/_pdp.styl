@@ -1,0 +1,462 @@
+#page .product_page_content {
+  margin: 0;
+  padding-top: 10px;
+
+  [aria-label="breadcrumb navigation region"] {
+    padding: 0 10px;
+  }
+
+  .product-images {
+    padding: 0;
+    min-height: 320px;
+  }
+
+  [id^="PageHeading"] {
+    display: none;
+  }
+
+  .row > div {
+    float: none;
+  }
+
+  .tabButtonContainer {
+    display: none;
+  }
+
+  .prod-det-main.row.margin-true, .tabtop.row {
+    margin: 0;
+    padding: 10px;
+    background-color: $pdp-controls-background;
+  }
+
+  .col3 {
+    width: 100%;
+    float: none;
+  }
+  .col4 {
+    display: none;
+  }
+
+  .lcBanner {
+    margin-left: $spacing;
+  }
+
+  // Product Options
+  .col5 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0;
+  }
+  div.definingAttributes {
+    padding: 0;
+    &.single-variation {
+      display: none;
+    }
+    > .attribute_swatch_list {
+      border-bottom: 1px solid $pdp-swatch-divider;
+      margin-bottom: 1rem;
+      &.last {
+        border-bottom: 0;
+      }
+    }
+    span.swatch-label, span.custom_swatch_label, .heading.swatch-value {
+      font-weight: normal !important;
+    }
+    ul.swatches > li a div {
+      margin: 10px 10px 0 0;
+      border: 0;
+      height: $pdp-swatch-height;
+      line-height: $pdp-swatch-height;
+      padding: 0 10px;
+      b {
+        font-weight: normal;
+        color: $pdp-swatch-color;
+      }
+      &.custom_swatch {
+        background-color: $body-background;
+      }
+      &.custom_swatch_selected b {
+        color: $body-background;
+      }
+      &.custom_swatch_disabled {
+        background-color: $pdp-disabled-swatch-background;
+        text-decoration: line-through;
+        color: #000;
+      }
+    }
+    .color_swatch_list {
+      display: block;
+      > ul {
+        margin-top: 0.5rem;
+        > li {
+          float: none;
+          display: inline-block;
+        }
+      }
+    }
+
+    .heading {
+      margin-bottom: ($spacing / 2);
+    }
+  }
+  [class^="item_spacer"], .clear_float {
+    display: none;
+  }
+
+  .gift-wrap-container  {
+    display: none;
+  }
+  #addToShoppingListBtn {
+    .shoppping_list_content {
+      padding-top: 8px;
+
+      &:before {
+        content: '+';
+      }
+    }
+
+    .drop {
+      display: none;
+      div {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  // Price
+  .price, .price-now {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: $spacing 0px;
+  }
+
+  // Quantity & Add to Cart
+  .shopperActions {
+    margin: 10px 0 0;
+  }
+  [id^=InventoryStatus_ShowLink] {
+    display: none !important;
+  }
+  .quantity_section {
+    display: none;
+  }
+  .pdp-actions-row {
+    display: flex;
+    margin-bottom: $spacing;
+    & > div {
+      display: block;
+      vertical-align: top;
+      &:first-of-type {
+        flex: initial;
+        padding-right: 5px;
+      }
+      &:last-of-type {
+        flex: 1;
+        padding-left: 5px;
+      }
+    }
+  }
+  #add2CartBtn {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    .button_text {
+      display: block;
+      padding: 0;
+      margin: 0;
+      height: $field-height;
+      line-height: $field-height;
+    }
+  }
+
+  // Availability
+  [id^="InventoryStatus_Availability_Section"] {
+    margin: 10px 0;
+    padding: 10px;
+    float: none !important;
+    line-height: 1.8rem;
+    .sublist {
+      margin: 0;
+      color: $font-color;
+      font-weight: normal;
+      font-size: 1.2rem;
+      img {
+        display: none;
+      }
+    }
+    .status-desc-txt {
+      color: $pdp-availability-color;
+    }
+  }
+
+  // Details Accordion
+  .accordion .accordion-navigation {
+    a:after {
+      sprite(icn-plus-black);
+    }
+    &.active a:after {
+      sprite(icn-minus-black);
+    }
+  }
+  .accordion .content.active {
+    padding-bottom: 10px;
+  }
+  [data-tab="Share"] .content {
+    min-height: 36px;
+    text-align: center;
+    .left {
+      padding: 0 5px;
+      display: inline-block;
+      vertical-align: middle;
+      float: none !important;
+    }
+  }
+
+  .Chart-ContainerSize {
+    width: 100%;
+    margin: $spacing 0;
+    padding: 0;
+    table {
+      min-width: initial;
+      padding: 0;
+      text-align: left;
+      font-size: 1.6rem;
+      &:first-of-type {
+        margin-top: $spacing * 2;
+      }
+      &.Chart-RowSpacer {
+        margin-bottom: $spacing;
+      }
+    }
+    ul {
+      padding: ($spacing / 2) ($spacing * 2);
+      &:nth-child(odd) {
+        background-color: $pdp-size-chart-highlight-color;
+      }
+      > li {
+        list-style-type: none;
+        line-height: 1.5;
+        label {
+          padding-right: 1rem;
+          &:after {
+            content: ':';
+          }
+        }
+      }
+    }
+  }
+
+  .long_description_content {
+    line-height: 1.8rem;
+    .was-li {
+      margin-bottom: ($spacing / 2);
+    }
+
+    h2 {
+      margin-bottom: ($spacing / 2);
+    }
+
+    h4 {
+      margin-top: $spacing;
+    }
+
+    p {
+      margin-bottom: ($spacing / 2);
+    }
+    .SmallChart-Body-LtGry, .SmallChart-Body-White {
+      width: 100%;
+      min-width: 100%;
+    }
+    
+    .PDP-SideSectionsA, .PDP-SideSectionsB, .PDP-SideSectionsQuote, .PDP-DescriptionDivider {
+      float: none;
+      width: 100%;
+    }
+  }
+}
+
+// personalization error message
+div.personalizationReqdMsg#personalizationMsg {
+  margin-left: -50%;
+  padding: 25px;
+  top: 40%;
+  height: auto;
+  left: 52%;
+  right: 2%;
+  width: inherit;
+}
+
+.zoomstatus, .zoomtracker, .magnifyarea {
+  display: none !important;
+}
+
+.store_message > .content {
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  max-width: auto;
+  width: auto;
+  min-width: auto;
+  margin: 0;
+  box-shadow: none;
+  border: 1px solid $secondary-color;
+}
+
+// Rating Stars
+#BVRRSummaryContainer {
+  margin: 0;
+  padding: 0;
+  .bv-stars-container {
+    text-align: center !important;
+    margin-bottom: 10px !important;
+  }
+  .bv-rating-stars-container.bv-focusable {
+    width: $rating-width !important;
+    position: relative !important;
+  }
+  .bv-rating-stars.bv-rating-stars-off {
+    font-size: 0 !important;
+    width: $rating-width !important;
+    height: $rating-height !important;
+    background-image: url('../images/review-star-empty.png') !important;
+    background-size: $review-star-width $review-star-height !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  .bv-rating-stars-on.bv-rating-stars {
+    font-size: 0 !important;
+    background-image: url('../images/review-star.png') !important;
+    background-size: $review-star-width $review-star-height !important;
+    height: $rating-height !important;
+    margin: 0 !important;
+    float: left;
+  }
+  .bv-rating-ratio {
+    padding-right: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+  .bv-rating-ratio-count {
+    font-size: 1.3rem !important;
+    font-weight: normal !important;
+    font-family: 'Caddy' !important;
+    padding-right: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+  }
+  .bv-rating-ratio-number {
+    display: none !important;
+  }
+  .bv-action-bar {
+    display: none !important;
+  }
+}
+
+// Reviews Tab
+#BVRRContainer {
+  .bv-content-header {
+    padding: 0 !important;
+  }
+  .bv-content-summary {
+    padding: 0 !important;
+  }
+}
+
+// Gift certificates/cards
+#page.bb-gift-page {
+  .prod-det-main {
+    background-color: $body-background !important;
+    > .col4 {
+      display: block;
+      width: 100%;
+    }
+    .widget_product_image_viewer {
+      .image_container {
+        width: 100%;
+        img {
+          float: none;
+          display: block;
+          width: 35%;
+          margin: 0 auto;
+        }
+      }
+      > .content {
+        float: none;
+        padding-bottom: $spacing;
+      }
+    }
+    .attribute_swatch_list {
+      display: none;
+    }
+    .heading.swatch-value {
+      display: none;
+    }
+    .heading.custom_swatch_label {
+      display: block;
+      padding: $spacing 0 ($spacing / 2);
+    }
+    .gift-pers {
+      padding: 0;
+      > label {
+        font-weight: normal;
+        padding: $spacing 0 ($spacing / 2);
+      }
+      > p {
+        font-size: 1.2rem;
+      }
+    }
+    .inputField, select {
+      border: 1px solid $pdp-select-border-color;
+      width: 100%;
+      padding: 0 5px;
+    }
+    input[type="checkbox"] + b {
+      line-height: 32px;
+      vertical-align: top;
+    }
+    label[for="giftCertAmount"] ~ .inputField {
+      width: 90%;
+    }
+  }
+  .pdp-left-espot {
+    margin: 0 !important;
+    ul {
+      padding-left: $spacing;
+      > li {
+        list-style-type: disc;
+      }
+    }
+  }
+  .pdp-actions-row {
+    margin: $spacing 0;
+  }
+}
+
+//Slick Adjustments
+.slick-slide {
+  text-align: center;
+  img {
+    display: inline-block;
+  }
+}
+
+#shoppingListDropDown {
+  .created_list {
+    font-size: 1.4rem;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+}
+
+.pdp-video-container {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    .pdp-video-inner {
+      width: 325px;
+      margin: 0 auto;
+    }
+}
+

@@ -1,0 +1,14 @@
+<section class="pdp-actions-row">
+  <div>
+    {{#with qty}}
+      <div class="qty-stepper" data-min="{{min}}" data-max="{{max}}">
+        <a class="stepper decrease {{active}}"></a>
+        <input data-proxy-for="{{id}}" type="tel" value="{{value}}">
+        <a class="stepper increase active"></a>
+      </div>
+    {{/with}}
+  </div>
+  <div>
+    {{{addToCart}}}
+  </div>
+</section>

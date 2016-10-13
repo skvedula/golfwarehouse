@@ -1,0 +1,84 @@
+#headerWrapper, .header_wrapper_position #header {
+  display: none;
+}
+
+#bb-global-header {
+  .header-main-container {
+    padding: 5px 10px;
+    text-align: center;
+    position: relative;
+
+    .menu-wrapper, .cart-wrapper{
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      height: 45px;
+      width: 60px;
+      text-align: left;
+    }
+    .cart-wrapper {
+      right: 10px;
+      left: auto;
+      text-align: right;
+      width: 40px;
+    }
+    .menu {
+      sprite(icn-menu);
+      display: inline-block;
+    }
+    .logo {
+      sprite(logo);
+      display: inline-block;
+    }
+    .cart {
+      sprite(icn-cart);
+      display: inline-block;
+    }
+  }
+}
+
+.bb-global-banner {
+  img {
+    width: 100%;
+  }
+}
+
+.header-search-container  {
+  background-color: $secondary-color;
+  padding: 10px;
+  #searchBox {
+    border: 0;
+    > .submitButton {
+      width: auto;
+      right: 2px;
+      margin-top: 2px;
+      margin-right: 0;
+    }
+  }
+  #searchTermWrapper {
+    padding: 0;
+    width: 100%
+  }
+  #searchTermWrapper > input {
+    height: $field-height;
+    padding: 0 10px;
+    font-size: 1.2rem;
+  }
+  /* override their changing of placeholder text to white */
+  #searchTermWrapper input {
+    &::-webkit-input-placeholder {
+      color: #D3D3D3;
+    }
+    &:-moz-placeholder {
+      color: #D3D3D3;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: #D3D3D3;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: #D3D3D3;
+    }
+  }
+}
